@@ -31,8 +31,10 @@ module "gtavpc" {
   private_subnets = ["172.16.1.0/24", "172.16.2.0/24", "172.16.3.0/24"]
   public_subnets  = ["172.16.101.0/24", "172.16.102.0/24", "172.16.103.0/24"]
 
-  enable_nat_gateway = true
-  enable_vpn_gateway = true
+  enable_nat_gateway     = true
+  single_nat_gateway     = true
+  one_nat_gateway_per_az = false
+  enable_vpn_gateway     = true
 
   tags = {
     Terraform   = "true"
