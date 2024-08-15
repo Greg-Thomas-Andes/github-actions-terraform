@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "your-s3-bucket-name"
+    bucket         = "terraform-tests3-deletelater"
     key            = "path/to/your/terraform.tfstate"
     region         = "ap-southeast-1"
-    dynamodb_table = "terraform-test-deleteLater"
+    dynamodb_table = "terraform-testdynamodb-deletelater"
     encrypt        = true
   }
 }
